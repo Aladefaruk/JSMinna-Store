@@ -1,0 +1,505 @@
+/*--Sign In & Register--*/
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: hsl(0, 0%, 98%);
+}
+
+.main-header {
+    width:100%;
+    padding: 0px 26px;
+    position: fixed ;
+    top: 0;
+    background: white;
+    z-index: 120;
+       
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-nav__items {
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav {
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 150px);
+    vertical-align: middle;
+}
+
+.toggles-button {
+    display: none;       
+}
+
+.main-nav__item a {
+    color: black;
+    vertical-align: middle;
+}
+.main-nav__item a:hover {
+    color: grey;
+    border-bottom: 2px solid grey;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    width: 40%;
+    box-shadow: 2px 2px 10px ;
+    background: white;
+    margin: 5% auto;
+}
+
+ input[type='email'],input[type='password'],
+ input[type='name'],input[type='text'],
+ input[type='tel'],input[type='text']{
+     padding:10px;
+     display: block;
+     font-size: 18px;
+     margin-bottom: 10px;
+     font-family: Arial, Helvetica, sans-serif;
+     background: transparent;
+     width: 400px;
+     outline: none;
+    
+    }
+
+label{
+    font-size: 26px;
+    padding:5px;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    }
+
+small{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin: 20px;
+    margin-top: 7%;
+    padding-top: 20px;
+    border-top: 2px solid grey;
+}
+
+button { 
+    background: black;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 5px;
+    font-size: 22px;
+    margin-top: 20px;
+    }
+
+button:disabled{
+    background: grey;
+}
+
+#validemail, #validpassword {
+    font-size: 17px;
+    display: block;
+}
+
+#container {
+    width: 100%;
+    padding: 5% 10%;
+}
+
+#container h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.welcome{
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 2px solid grey;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(128, 128, 128, 0.707);
+}
+
+a:hover {
+    color: black;
+}
+
+@keyframes spin{
+    from{ transform: rotate (0deg);
+    }
+    to{ transform: rotate(360deg);}
+}
+
+.loading_ring{
+    width: 15px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 100%;
+    border-top: black;
+    border-bottom: black;
+    animation: spin 2s infinite linear;
+    display: none;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.notification{
+    color: red;
+    margin: 5px;
+    text-align: center;
+}
+/*-- END Sign In & Register*--/
+
+/*Home*/
+.wrap {
+    margin: 6% auto;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+
+}
+
+.wrap h1{
+    font-size: 50px;
+}
+
+.suggest {
+    border: 3px solid grey;
+    padding: 32px;
+    width: 70%;
+    margin:20px auto;
+    margin-top: 32px;
+    position: relative;
+}
+.suggest h1{
+    font-size: 40px;
+}
+
+.suggest h3{
+    font-size: 30px;
+
+}
+
+.suggest:hover,
+.suggest:active  {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-color: white;
+}
+
+.suggestionwrapper{
+    display: flex;
+    justify-content: left;
+    margin: 5% 5%;
+}
+
+.suggestionwrapper button{
+    width: 50%;
+    background: grey;
+    color: white;
+    border: none;
+}
+
+.suggestionwrapper button:hover{
+    padding: 7px;
+}
+
+
+.suggestionwrapper input[type='text']{
+    width: 80%;
+    outline: none;
+}
+
+select{
+    width: 85%;
+    height:45px;
+    color: white;
+    background: grey;
+    font-size: 22px;
+    outline: none;
+}
+
+.suggestContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    margin: 20px auto;
+    padding: 30px;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    color: black;
+    background: white;
+    border-radius: 20px;
+}
+/*--END Home--*/
+
+/*--View Suggestion--*/
+.viewsuggestionsheader {
+    width: 50%;
+    margin: auto 30%;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+}
+
+.viewsuggestionsheader button {
+    width: 40%;
+    margin-right: 10%;
+}
+
+.viewsuggestionsheader input {
+    display: flex;
+    justify-content: center;
+    margin-left: 20%;
+}
+.viewsuggestionsheader h1 {
+    font-size: 40px;
+}
+/*--END View Suggestion--*/
+
+
+@media only screen and (max-width: 540px) {
+    /*--Sign In & Register--*/
+    #container h1 {
+        font-size: 28px;
+    }
+
+    .main-nav__item {
+        display: none;
+    }
+
+    .toggles-button {
+        display: inline-block;       
+    }
+
+    .backdrop {
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.9);
+    }
+
+    .mobile-nav {
+        display: none;
+        position: fixed;
+        z-index: 130;
+        background: white;
+        width: 100%;
+        top: 85px;
+        margin-left: 0%;
+        margin-right: 0%;
+        border-radius: 0px;
+    }
+    
+    .mobile-nav__items {
+        width:100%;
+        height: auto;
+        list-style: none;
+        margin:1% auto;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .mobile-nav__item {
+        margin: 30px 0;
+       
+    }
+    
+    .mobile-nav__item a {
+        margin: 1rem 0;
+        color: black;
+        font-size: 22px;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+
+    .wrapper{
+        font-size: 18px;
+        width: 80%;
+        padding: 10px;
+        margin-top: 30% ;
+    }
+
+    input[type='email'],input[type='password'],
+    input[type='name'],input[type='text'],
+    input[type='tel']{
+        padding:7px;
+        font-size: 18px;
+        width: 93%;
+    }
+
+    label{
+        font-size: 20px;
+
+    }
+
+    small{
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+    }
+    /*-- END Sign In & Register--*/
+
+    /*Home*/
+    .wrap {
+        margin: 25% auto;
+        }
+
+    .wrap h1{
+        font-size: 35px;
+        }
+
+    .suggest { 
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        border-color: white;
+        }
+
+    .suggest h1{
+        font-size: 30px;
+        color: black;
+        }
+
+    .suggest h2{
+        font-size: 20px;
+        color: black;
+        }
+/*--END Home Page--*/
+
+/*--Make Sggestion Page--*/
+    .suggestionwrapper{
+        margin: 25% 5%;
+    }
+    .wlcmsgcontainer{
+        text-align: center;
+        
+
+    }
+.suggestionwrapper button{
+    width: 50%;
+    background: grey;
+    color: white;
+    border: none;
+
+}
+
+.suggestionwrapper button:hover{
+    padding: 7px;
+}
+
+
+.suggestionwrapper input[type='text']{
+    width: 80%;
+    outline: none;
+}
+
+select{
+    width: 85%;
+    height:45px;
+    color: white;
+    background: grey;
+    font-size: 22px;
+    outline: none;
+}
+
+.suggestContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    margin: 20px auto;
+    padding: 30px;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    color: black;
+    background: white;
+    border-radius: 20px;
+}
+/*--END Home--*/
+
+/*--View Suggestion--*/
+.viewsuggestionsheader {
+    width: 100%;;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+
+.viewsuggestionsheader button {
+    width: 40%;
+    margin-right: 10%;
+}
+
+.viewsuggestionsheader input {
+   
+    width: 50%;
+}
+.viewsuggestionsheader h1 {
+    font-size: 30px;
+}
+/*--END View Suggestion--*/
+
+}
+
+@media only screen and (max-width: 1052px) and (min-width: 541px){
+    /*--Sign In & Register--*/
+    .wrapper{
+        width: 65%;
+        margin-top: 10%;
+    }
+
+    input[type='email'],input[type='password'],
+    input[type='name'],input[type='text'],
+    input[type='tel']{
+        padding:7px;
+        font-size: 18px;
+        width: 90%;
+    }
+    /*--END Sign In & Register--*/
+
+    /*--View Suggestion--*/
+.viewsuggestionsheader {
+    width: 100%;;
+    margin: 0 auto;
+}
+
+.viewsuggestionsheader button {
+    width: 40%;
+    margin-right: 10%;
+}
+
+.viewsuggestionsheader input {
+    width: 50%;
+}
+
+.viewsuggestionsheader h1 {
+    margin-right: 10%;
+}
+/*--END View Suggestion--*/
+}

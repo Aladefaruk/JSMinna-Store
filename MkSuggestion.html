@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Make Suggestion</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="style.css"/>
+
+    </head>
+    <body onload="loadWelcome()">
+        <div class="backdrop"></div>
+        <header class="main-header"> 
+            <div id="logo">
+                <h1>LOGO</h1>
+              </div>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li  class="main-nav__item">
+                    <a href="home.html">Home</a>
+                </li>
+                <li  class="main-nav__item">
+                    <a href="viewsuggestions.html">View Suggestions</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="index.html">Sign Out</a>
+                </li>
+            <img src="images/icon-hamburger.svg" alt=""  class="toggles-button">
+            </ul> 
+        </nav>
+        </header>
+        <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <a href="home.html">Home</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="viewsuggestions.html">View Suggestions</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="index.html">Sign Out</a>
+            </li>
+        </ul>
+        </nav>
+        <main>
+            <div class="suggestionwrapper">
+                <form id='suggestioncontainer' method="POST" onsubmit="addItem(event)">
+                    <div class='wlcmsgcontainer'>
+                        <h1 class="welcomemsg"></h1>
+                        <h3>Pick an item from the available categories</h3>
+                    </div>
+
+                    <label for='name' >Item Name:</label>  <input type="text" id='itemname'required name='name' />
+                    <label for='description' >Describe the item:</label>  <input type="text" id='description'required name='name' />
+                    <label>Item Category</label>
+                    <select id='category'>
+                        <option>electronics</option>
+                        <option>furniture</option>
+                        <option>grocery</option>
+                        </select>
+                    <label for='reason' >Why do you want this item:</label> <input id="reason" type='text' required/>
+                    <button type="submit" value="addItem" class='addItem' >Add Item<div class='loading_ring'></div></button>
+                    <h3 class='feedback'></h3>
+                    </form>
+                    
+              </div>
+        </main>
+<script  type="text/javascript" src="script.js"></script>
+    </body>
+</html>

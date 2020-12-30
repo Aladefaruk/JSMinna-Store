@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="style.css"/>
+
+    </head>
+    <body>
+        <div class="backdrop"></div>
+        <header class="main-header"> 
+            <div id="logo">
+                <h1>LOGO</h1>
+              </div>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li  class="main-nav__item">
+                    <a href="register.html">Register</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="index.html">Sign In</a>
+                </li>
+            <img src="images/icon-hamburger.svg" alt=""  class="toggles-button">
+            </ul> 
+        </nav>
+        </header>
+        <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <a href="register.html">Register</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="index.html">Sign In</a>
+            </li>
+        </ul>
+        </nav>
+        <main>
+            <div class="wrapper">
+                <form id='container' method="POST" onsubmit="registrationChange(event)">
+                    <div class='welcome'>
+                    <h1>Hello!</h1>
+                    <h3>Create your free account</h3>
+                    </div>
+                    <label for='name' >Full Name:</label>  <input type="text" id='name'required name='name'/>
+                    <label for='email' >Email: <span id='validemail'></span> </label>  <input type="email" id='email'required name='email' onkeyup='validEmail();' />
+                    <label for='phone' >Mobile Number:</label>  <input type="tel" id='phone'required name='phone' />
+                    <label>Gender</label>
+                    <input type="radio" name="option" id="opt1"> Male
+                    <input type="radio" name="option" id="opt2"> Female
+                    <label for='address' >Address:</label> <input id="address" type='text' required/>
+                    <label for='password' > Enter Password: <span id='validpassword'></span></label><input type="password" id='password' min="8" name='password' onkeyup="passwordLen(); loginenableButton()"/>
+                    <button type="submit" value="Sign In" disabled class='submit' >Sign In<div class='loading_ring'></div></button>
+                    <h3 class='feedbackreg'></h3>
+                    <small>Already a user? <a href="#">Sign in here</a> </small>
+                    </form>
+                    
+              </div>
+        </main>
+<script  type="text/javascript" src="script2.js"></script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="style.css"/>
+
+    </head>
+    <body onload="loadAllsuggestion()">
+        <div class="backdrop"></div>
+        <header class="main-header"> 
+            <div id="logo">
+                <h1>LOGO</h1>
+              </div>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li  class="main-nav__item">
+                    <a href="home.html">Home</a>
+                </li>
+                <li  class="main-nav__item">
+                    <a href="viewsuggestions.html">View Suggestions</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="index.html">Sign Out</a>
+                </li>
+
+            <img src="images/icon-hamburger.svg" alt=""  class="toggles-button">
+            </ul> 
+        </nav>
+        </header>
+        <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <a href="home.html">Home</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="MkSuggestion.html">Make Suggestions</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="index.html">Sign Out</a>
+            </li>
+        </ul>
+        </nav>
+        <main class='viewsuggestionswrapper'>
+            <div class='viewsuggestionsheader'>
+           <h1>See what people want!</h1>
+           <input  id="inputSearch"  type="text" placeholder="Search By Category"  />
+           <h3>There are three categories; ELECTRONICS, FURNITURE, GROCERY</h3>
+           <button type="submit" class='searchCategory' onclick="searchbyCategory()">Search<div class='loading_ring'></div></button>
+            </div>
+           <div class='suggestContainer'></div>
+           <div class="suggestContainer1"></div>
+        </main>
+<script  type="text/javascript" src="script.js"></script>
+    </body>
+</html>
