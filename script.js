@@ -120,6 +120,7 @@ loginChange=(event)=>{
           
         if(!text.success){
         document.querySelector('.notification').insertAdjacentHTML('afterbegin',text.message)
+        container.reset()
     }else{
         window.location.replace("home.html")
     } 
@@ -157,9 +158,7 @@ loadAllsuggestion=()=>{
     document.querySelector('.suggestContainer').insertAdjacentHTML('afterbegin',Suggestions)
 }).catch (err=>{
     console.log(err)
-    window.alert(`Something went wrong: ${err.status} error`)
-    let errr= `<h1 class='error'> Something went wrong:  ${err.status} error</h1>`
-    document.querySelector('.suggestContainer').insertAdjacentHTML('afterbegin',errr)
+
 })
 }
 
@@ -209,11 +208,12 @@ searchbyCategory=()=>{
 
 loadWelcome=()=>{
     document.querySelector('.welcomemsg').insertAdjacentHTML('afterbegin',`Welcome ${personObj.fullName}`)
-
 }
+
 let personObj= JSON.parse(localStorage.getItem('token'));
 
 
+let x= document.querySelector('#category');
 
 addItem=(event)=>{
     event.preventDefault();
@@ -229,7 +229,7 @@ addItem=(event)=>{
         body:JSON.stringify({
            itemName: itemName.value,
            itemDescription: itemDescription.value,
-           itemCategory: selectValue.text,
+           itemCategory: x.value,
            reason: reason.value
        })
    })
@@ -242,7 +242,6 @@ addItem=(event)=>{
     .then(text=>{
         if(text.success){
             document.querySelector('.feedback').insertAdjacentHTML('afterbegin',text.payload.message)
-
         }else{
             document.querySelector('.feedback').insertAdjacentHTML('afterbegin',text.payload.message)
         } 
@@ -250,7 +249,6 @@ addItem=(event)=>{
         console.log(personObj)
     }).catch (err=>{
         console.log(err)
-        window.alert(`Something went wrong: ${err.status} error`)
         document.querySelector('.load').remove()
         let errr= `<h1 class='error'> Something went wrong:  ${err.status} error</h1>`
         document.querySelector('#app').insertAdjacentHTML('afterbegin',errr)
@@ -259,7 +257,6 @@ addItem=(event)=>{
 
 
 
-let selectValue=category.options[category.selectedIndex]
 
 
 
